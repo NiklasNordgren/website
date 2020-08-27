@@ -1,12 +1,8 @@
-<mat-toolbar color="accent">
+<mat-toolbar color="primary">
 
   <span class="margin-left-3">Niklas Nordgren</span>
 
   <span class="fill-space"></span>
-
-  
-  <button mat-mini-fab style="margin-right: 5px;"><span class="flag-icon flag-icon-squared flag-icon-se"></span></button>
-  <button mat-mini-fab><span class="flag-icon flag-icon-squared flag-icon-gb"></span></button>
 
   <div *ngIf="darkthemeactive; then thenBlock else elseBlock"></div>
   <ng-template #thenBlock>
@@ -25,8 +21,12 @@
 
 <mat-toolbar>
   <button mat-button class="margin-left-3" [routerLink]="['/blog']"><mat-icon>create</mat-icon> Blog</button>
-  <button mat-button class="margin-left-3" [routerLink]="['/about']"><mat-icon>info</mat-icon> About</button>
-  <button mat-button class="margin-left-3" [routerLink]="['/contact']"><mat-icon>email</mat-icon> Contact</button>
+  <button mat-button class="margin-left-1" [routerLink]="['/about']"><mat-icon>info</mat-icon> About</button>
+  <button mat-button class="margin-left-1" [routerLink]="['/contact']"><mat-icon>email</mat-icon> Contact</button>
+  <span class="fill-space"></span>
+  <button mat-mini-fab class="margin-right-1"><ion-icon name="logo-github"></ion-icon></button>
+  <button mat-mini-fab class="margin-right-1"><ion-icon name="logo-instagram"></ion-icon></button>
+  <button mat-mini-fab class="margin-right-3"><ion-icon name="logo-facebook"></ion-icon></button>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
