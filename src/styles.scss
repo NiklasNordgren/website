@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    height: 100%;
+    height: 100vh;
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, 
+    "Helvetica Neue", sans-serif; 
+}
+
+.fill-space {
+    flex: 1 1 auto;
+}
+
+.margin-left-3 {
+    margin-left: 3% !important;;
+}
+
+.margin-left-6 {
+    margin-left: 6% !important;
+}
+
+.margin-right-6 {
+    margin-right: 6% !important;;
+}
+
+.margin-right-3 {
+    margin-right: 3% !important;;
+}
+
+.padding-16 {
+    padding: 16px !important;;
+}
+
+.mat-card {
+    margin: 16px !important;
+    border-radius: 10px !important;
+}
+
+
