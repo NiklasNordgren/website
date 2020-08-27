@@ -1,18 +1,22 @@
 <mat-toolbar color="accent">
 
-  <span class="margin-left-3">N.N.N</span>
+  <span class="margin-left-3">Niklas Nordgren</span>
 
   <span class="fill-space"></span>
 
+  
+  <button mat-mini-fab style="margin-right: 5px;"><span class="flag-icon flag-icon-squared flag-icon-se"></span></button>
+  <button mat-mini-fab><span class="flag-icon flag-icon-squared flag-icon-gb"></span></button>
+
   <div *ngIf="darkthemeactive; then thenBlock else elseBlock"></div>
   <ng-template #thenBlock>
-      <button (click)="toggleTheme()" mat-icon-button class="margin-right-3" aria-label="Icon button with a half moon icon, dark theme">
+      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3 margin-left-3" aria-label="Icon button with a half moon icon, dark theme">
           <mat-icon>brightness_2</mat-icon>
       </button>
   </ng-template>
 
   <ng-template #elseBlock>
-      <button (click)="toggleTheme()" mat-icon-button class="margin-right-3" aria-label="Icon button with sun icon, light theme">
+      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3 margin-left-3" aria-label="Icon button with sun icon, light theme">
           <mat-icon>wb_sunny</mat-icon>
       </button>
   </ng-template>
