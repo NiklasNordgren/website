@@ -1,32 +1,39 @@
 <mat-toolbar color="primary">
 
-  <span class="margin-left-3">Niklas Nordgren</span>
+  <span class="margin-left-3"><b>Niklas Nordgren</b></span>
 
   <span class="fill-space"></span>
 
   <div *ngIf="darkthemeactive; then thenBlock else elseBlock"></div>
   <ng-template #thenBlock>
-      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3 margin-left-3" aria-label="Icon button with a half moon icon, dark theme">
-          <mat-icon>brightness_2</mat-icon>
+      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3" aria-label="Icon button with a half moon icon, dark theme">
+        <ion-icon name="moon-outline"></ion-icon>
       </button>
   </ng-template>
 
   <ng-template #elseBlock>
-      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3 margin-left-3" aria-label="Icon button with sun icon, light theme">
-          <mat-icon>wb_sunny</mat-icon>
+      <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3" aria-label="Icon button with sun icon, light theme">
+        <ion-icon name="sunny-outline"></ion-icon>
       </button>
   </ng-template>
 
 </mat-toolbar>
 
-<mat-toolbar>
-  <button mat-button class="margin-left-3" [routerLink]="['/blog']"><mat-icon>create</mat-icon> Blog</button>
-  <button mat-button class="margin-left-1" [routerLink]="['/about']"><mat-icon>info</mat-icon> About</button>
-  <button mat-button class="margin-left-1" [routerLink]="['/contact']"><mat-icon>email</mat-icon> Contact</button>
+<mat-toolbar color="accent">
+  <button mat-raised-button color="primary" class="margin-left-3" [routerLink]="['/home']"><ion-icon name="home-outline"></ion-icon> Home</button>
+  <button mat-raised-button color="primary" class="margin-left-1" [routerLink]="['/blog']"><ion-icon name="pencil-outline"></ion-icon> Blog</button>
+  <button mat-raised-button color="primary" class="margin-left-1" [routerLink]="['/about']"><ion-icon name="information-circle-outline"></ion-icon> About</button>
+  <button mat-raised-button color="primary" class="margin-left-1" [routerLink]="['/contact']"><ion-icon name="mail-outline"></ion-icon> Contact</button>
   <span class="fill-space"></span>
-  <button mat-mini-fab class="margin-right-1"><ion-icon name="logo-github"></ion-icon></button>
-  <button mat-mini-fab class="margin-right-1"><ion-icon name="logo-instagram"></ion-icon></button>
-  <button mat-mini-fab class="margin-right-3"><ion-icon name="logo-facebook"></ion-icon></button>
+  <button mat-mini-fab color="primary" class="margin-right-1"><ion-icon name="logo-github"></ion-icon></button>
+  <button mat-mini-fab color="primary" class="margin-right-1"><ion-icon name="logo-linkedin"></ion-icon></button>
+  <button mat-mini-fab color="primary" class="margin-right-3"><ion-icon name="logo-instagram"></ion-icon></button>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
+
+<mat-toolbar color="primary">
+
+  <span class="margin-left-3"><b>Niklas Nordgren</b></span>
+
+</mat-toolbar>
