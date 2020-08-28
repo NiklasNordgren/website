@@ -10,9 +10,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { OverlayModule} from '@angular/cdk/overlay';
-import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
@@ -20,7 +22,6 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     BlogComponent,
     ContactComponent,
     HomeComponent
@@ -35,8 +36,10 @@ import { HomeComponent } from './home/home.component';
     MatTableModule,
     MatCardModule,
     MatGridListModule,
-    OverlayModule,
-
+    MatTooltipModule,
+    MatListModule,
+    MatDividerModule,
+    OverlayModule
   ],
   providers: [],
   bootstrap: [
