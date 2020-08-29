@@ -20,13 +20,15 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
