@@ -26,32 +26,32 @@
   <div *ngIf="mobileQuery.matches; then fabs else buttons"></div>
 
   <ng-template #fabs>
-    <button mat-mini-fab color="primary" class="margin-left-3" [routerLink]="['/home']">
-      <ion-icon name="home-outline" routerLinkActive="mat-accent" matTooltip="Home"></ion-icon>
+    <button mat-mini-fab color="primary" class="margin-left-3" matTooltip="Home" [routerLink]="['/home']">
+      <ion-icon name="home-outline" routerLinkActive="mat-accent"></ion-icon>
     </button>
-    <button mat-mini-fab color="primary" class="margin-left-1" [routerLink]="['/blog']">
-      <ion-icon name="pencil-outline" matTooltip="Blog"></ion-icon>
+    <button mat-mini-fab color="primary" class="margin-left-1" matTooltip="Blog" [routerLink]="['/blog']">
+      <ion-icon name="pencil-outline"></ion-icon>
     </button>
-    <button mat-mini-fab color="primary" class="margin-left-1" [routerLink]="['/projects']">
-      <ion-icon name="hammer-outline" matTooltip="Projects"></ion-icon>
+    <button mat-mini-fab color="primary" class="margin-left-1" matTooltip="Projects" [routerLink]="['/projects']">
+      <ion-icon name="hammer-outline"></ion-icon>
     </button>
-    <button mat-mini-fab color="primary" class="margin-left-1" [routerLink]="['/contact']">
-      <ion-icon name="mail-outline" matTooltip="Contact"></ion-icon>
+    <button mat-mini-fab color="primary" class="margin-left-1" matTooltip="Contact" [routerLink]="['/contact']">
+      <ion-icon name="mail-outline"></ion-icon>
     </button>
   </ng-template>
 
   <ng-template #buttons>
-    <button mat-raised-button color="primary" class="margin-left-3" [routerLink]="['/home']">
-      <ion-icon name="home-outline" routerLinkActive="mat-accent" matTooltip="Home"></ion-icon> Home
+    <button mat-raised-button color="primary" class="margin-left-3" matTooltip="Home" [routerLink]="['/home']">
+      <ion-icon name="home-outline" routerLinkActive="mat-accent"></ion-icon> Home
     </button>
-    <button mat-raised-button color="primary" class="margin-left-1" [routerLink]="['/blog']">
-      <ion-icon name="pencil-outline" matTooltip="Blog"></ion-icon> Blog
+    <button mat-raised-button color="primary" class="margin-left-1" matTooltip="Blog" [routerLink]="['/blog']">
+      <ion-icon name="pencil-outline"></ion-icon> Blog
     </button>
-    <button mat-raised-button color="primary" class="margin-left-1" [routerLink]="['/projects']">
-      <ion-icon name="hammer-outline" matTooltip="Projects"></ion-icon> Projects
+    <button mat-raised-button color="primary" class="margin-left-1" matTooltip="Projects" [routerLink]="['/projects']">
+      <ion-icon name="hammer-outline"></ion-icon> Projects
     </button>
-    <button mat-raised-button color="primary" class="margin-left-1" [routerLink]="['/contact']">
-      <ion-icon name="mail-outline" matTooltip="Contact"></ion-icon> Contact
+    <button mat-raised-button color="primary" class="margin-left-1" matTooltip="Contact" [routerLink]="['/contact']">
+      <ion-icon name="mail-outline"></ion-icon> Contact
     </button>
   </ng-template>
 
