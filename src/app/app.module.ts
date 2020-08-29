@@ -15,6 +15,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { OverlayModule} from '@angular/cdk/overlay';
+import { LayoutModule } from '@angular/cdk/layout';
+
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
@@ -39,7 +41,8 @@ import { HomeComponent } from './home/home.component';
     MatTooltipModule,
     MatListModule,
     MatDividerModule,
-    OverlayModule
+    OverlayModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [
