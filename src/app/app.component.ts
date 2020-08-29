@@ -8,10 +8,12 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 })
 export class AppComponent {
 
-  darkthemeactive: Boolean = false;
+  darkthemeactive: Boolean = true;
   @HostBinding('class') componentCssClass = "dark-theme";
 
-  constructor(public overlayContainer: OverlayContainer) { }
+  constructor(public overlayContainer: OverlayContainer) { 
+    this.toggleTheme();
+  }
 
   toggleTheme(): void {
     let theme: string = this.darkthemeactive ? "dark-theme" : "light-theme";
