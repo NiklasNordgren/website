@@ -102,6 +102,11 @@ body {
     flex-grow: 1 !important;
 }
 
+.mat-icon {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
 ion-icon {
     width: 24px;
     height: 24px;
