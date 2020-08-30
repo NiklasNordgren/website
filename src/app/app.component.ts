@@ -1,6 +1,9 @@
 import { Component, HostBinding, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,24 +15,42 @@ export class AppComponent {
   isSmallScreen: Boolean;
   darkThemeActive: Boolean = true;
   mobileQuery: MediaQueryList;
+  href: string = "";
+  subscriptions: Subscription = new Subscription();
 
   @HostBinding('class') componentCssClass = "dark-theme";
 
   constructor(
     public overlayContainer: OverlayContainer,
     public breakpointObserver: BreakpointObserver,
-    changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher
+    public changeDetectorRef: ChangeDetectorRef,
+    public media: MediaMatcher,
+    public router: Router,
+    public location: Location
   ) {
     this.toggleTheme();
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+  }
 
+  private _mobileQueryListener: () => void;
+
+  ngOnInit(): void {
+    const routerSub = this.router.events.subscribe((val) => {
+      if(this.location.path() != '' || this.location.path() != this.href){
+        this.href = this.location.path();
+        console.log(this.href);
+      } else {
+        this.href = '/home'
+      }
+    });
+    this.subscriptions.add(routerSub);
   }
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.subscriptions.unsubscribe();
   }
 
   toggleTheme(): void {
@@ -38,7 +59,5 @@ export class AppComponent {
     this.componentCssClass = theme;
     this.darkThemeActive = !this.darkThemeActive;
   }
-
-  private _mobileQueryListener: () => void;
 
 }
