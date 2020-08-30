@@ -40,8 +40,10 @@ export class AppComponent {
     const routerSub = this.router.events.subscribe((val) => {
       if(this.location.path() != '' || this.location.path() != this.href){
         this.href = this.location.path();
+        this.changeDetectorRef.detectChanges();
       } else {
-        this.href = '/home'
+        this.href = '/home';
+        this.changeDetectorRef.detectChanges();
       }
     });
     this.subscriptions.add(routerSub);
