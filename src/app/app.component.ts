@@ -40,7 +40,6 @@ export class AppComponent {
     const routerSub = this.router.events.subscribe((val) => {
       if(this.location.path() != '' || this.location.path() != this.href){
         this.href = this.location.path();
-        console.log(this.href);
       } else {
         this.href = '/home'
       }
