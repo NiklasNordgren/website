@@ -25,6 +25,8 @@
 
   <div *ngIf="mobileQuery.matches; then fabs else buttons"></div>
 
+  <!-- TODO: check if screenwidth is 320 or less, then show hamburger -->
+
   <ng-template #fabs>
     <button mat-mini-fab color="primary" class="margin-left-3" matTooltip="Home" [routerLink]="['/home']">
       <div *ngIf="href == '/home'; then homeFabFilled else homeFabOutline"></div>
