@@ -107,13 +107,19 @@ body {
     vertical-align: middle;
 }
 
-.underline-on-hover:hover{
+.underline-on-hover:hover {
     text-decoration: underline !important;
 }
 
 ion-icon {
     width: 24px;
     height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.vertical-align-bottom {
+    vertical-align: text-bottom !important;
 }
 
 a {
@@ -140,4 +146,18 @@ mat-list.list-horizontal {
         margin-top: 1%;
         margin-bottom: 1%;
     }
+}
+
+::ng-deep .mat-line {
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+}
+
+::ng-deep .mat-list .mat-list-item {
+    height: initial !important;
+    padding: 1% 1% !important;
+}
+
+.mat-list-base {
+    padding-top: 0px !important;
 }

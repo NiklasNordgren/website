@@ -24,6 +24,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 import { MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
     BlogComponent,
     ContactComponent,
     HomeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
