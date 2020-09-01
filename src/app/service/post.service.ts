@@ -15,8 +15,16 @@ export class PostService {
       pictures: [],
       paragraphs: [
         "Ok here we go, first blog post I have ever written. Let´s start off with what my intentions are for this website. First of all I´m very excited that it is up and running on a public domain. I have never done something like this before without an organization or company backing me up.",
-        "The main reason for this website is that I like creating stuff, always have. This will be the main platform I test and share stuff I create. For better or worse I easily get bored when if I´m not actively doing something. My aim is to update this website with new features weekly.",
-        "Feel free to contact me in any way if you have any feedback, questions or insights",
+        "The main reason for this website is that I like creating stuff, always have. This will be the main platform I test and share stuff I create. For better or worse I easily get bored if I´m not actively doing something. So this place will be the main outlet of my boredom. My aim is to update this website with new features weekly.",
+        "",
+        "Current backlog:",
+        "General look and feel of the application.",
+        "Images in blog posts.",
+        "Support all screen sizes, currently screen sizes < 320 pixels makes the main toolbar look really bad.",
+        "Refactoring of stinky code. :)",
+        "Fix the screen height, so the scrollbar doesn't appear when not needed.",
+        "",
+        "Feel free to contact me if you have feedback, questions or insights.",
       ],
     }
 
