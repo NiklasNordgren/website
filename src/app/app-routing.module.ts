@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PostComponent } from './post/post.component';
+import { Post } from './model/post.model';
 
 const routes: Routes = [
   {
@@ -18,13 +19,12 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    component: BlogComponent,
-    children: [
-      {
-				path: 'post/:id',
-				component: PostComponent
-			}
-    ]
+    component: BlogComponent
+  },
+  {
+    path: 'post/:id',
+    component: PostComponent,
+    data: Post
   },
   {
     path: 'projects',

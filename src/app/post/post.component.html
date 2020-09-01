@@ -1,1 +1,15 @@
-<p>post works!</p>
+<mat-card>
+    <div class="margin-left-3 margin-right-3">
+        <mat-card-title>
+            <ion-icon name="newspaper"></ion-icon><span class="vertical-align-bottom"> {{ post.title }}</span>
+        </mat-card-title>
+        <mat-divider [inset]="true"></mat-divider>
+        <mat-card-content>
+            <p></p>
+
+
+            <p *ngFor="let paragraph of post.paragraphs">{{ paragraph }}</p>
+
+        </mat-card-content>
+    </div>
+</mat-card>
