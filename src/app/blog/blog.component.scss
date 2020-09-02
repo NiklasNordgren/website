@@ -1,4 +1,13 @@
-.mat-list-item:hover {
-    cursor: pointer;
-    background-color: #fafafa0A;
+::ng-deep .mat-line {
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+}
+
+::ng-deep .mat-list .mat-list-item {
+    height: initial !important;
+    //padding: 1% 1% !important;
+}
+
+mat-accordion {
+    width: 100%;
 }

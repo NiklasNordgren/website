@@ -165,3 +165,14 @@ mat-list.list-horizontal {
 .mat-list-base {
     padding-top: 0px !important;
 }
+
+.mat-expansion-panel-header.mat-expanded {
+    background-color: #fafafa0a !important;
+}
+
+.mat-card-actions,
+.mat-card-subtitle,
+.mat-card-content {
+    display: block;
+    margin-bottom: 0px;
+}

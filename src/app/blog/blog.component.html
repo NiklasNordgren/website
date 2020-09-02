@@ -8,6 +8,7 @@
 
             <mat-list>
 
+                <!--
                 <div *ngFor="let post of posts">
                     <mat-list-item (click)="gotoPost(post)">
                         <ion-icon matListIcon name="newspaper"></ion-icon>
@@ -17,6 +18,28 @@
                         <p matLine>{{ post.dateString }}</p>
                     </mat-list-item>
                     <mat-divider [inset]="true"></mat-divider>
+                </div>
+                -->
+
+                <div *ngFor="let post of posts">
+                    <mat-list-item>
+                        <mat-accordion matLine>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        {{ post.title }}
+                                    </mat-panel-title>
+                                    <mat-panel-description>
+                                        {{ post.dateString }}
+                                    </mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <p></p>
+                                <p *ngFor="let paragraph of post.paragraphs">{{ paragraph }}</p>
+                                <mat-divider></mat-divider>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </mat-list-item>
+                    
                 </div>
 
             </mat-list>
