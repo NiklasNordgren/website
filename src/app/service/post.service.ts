@@ -39,8 +39,8 @@ export class PostService {
 
         "[1] https://angular.io/",
         "[2] https://material.angular.io/",
-        "[3] https://www.google.com/intl/sv/chrome/",
-        "[4] https://www.microsoft.com/sv-se/edge",
+        "[3] https://www.google.com/intl/en/chrome/",
+        "[4] https://www.microsoft.com/en-us/edge",
         "[5] https://www.howtogeek.com/202825/what%E2%80%99s-the-difference-between-chromium-and-chrome/",
         
 
