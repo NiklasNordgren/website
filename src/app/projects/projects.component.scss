@@ -5,7 +5,6 @@
 
 ::ng-deep .mat-list .mat-list-item {
     height: initial !important;
-    //padding: 1% 1% !important;
 }
 
 mat-accordion {
@@ -14,9 +13,4 @@ mat-accordion {
 
 ion-icon {
     margin-bottom: 3px;
-}
-
-.mat-expansion-panel-header {
-    padding: 0px !important;
-    padding-left: 24px !important;
 }
