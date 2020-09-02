@@ -8,6 +8,19 @@
     //padding: 1% 1% !important;
 }
 
+.mat-card-actions, .mat-card-subtitle, .mat-card-content {
+    display: block;
+    margin-bottom: 0px;
+}
+
+mat-panel-title{
+    text-align: center;
+}
+
+mat-panel-description{
+    text-align: center;
+}
+
 mat-accordion {
     width: 100%;
 }
