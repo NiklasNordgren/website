@@ -8,16 +8,18 @@
     //padding: 1% 1% !important;
 }
 
-.mat-card-actions, .mat-card-subtitle, .mat-card-content {
+.mat-card-actions,
+.mat-card-subtitle,
+.mat-card-content {
     display: block;
     margin-bottom: 0px;
 }
 
-mat-panel-title{
+mat-panel-title {
     text-align: center;
 }
 
-mat-panel-description{
+mat-panel-description {
     text-align: center;
 }
 
@@ -27,4 +29,8 @@ mat-accordion {
 
 ion-icon {
     margin-bottom: 3px;
+}
+
+.mat-expansion-panel-header {
+    padding: 0px !important;
 }
