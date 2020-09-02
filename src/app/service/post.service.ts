@@ -10,8 +10,8 @@ export class PostService {
 
     {
       id: 1,
-      title: "The first post",
-      dateString: "Tuesday, 2020-09-01",
+      title: "First post",
+      dateString: "2020-09-01",
       pictures: [],
       paragraphs: [
         "Ok here we go, first blog post I have ever written. Let's start off with what my intentions are for this website. First of all I'm very excited that it is up and running on a public domain. I have never done something like this before without an organization or company backing me up.",
@@ -26,9 +26,23 @@ export class PostService {
         "",
         "Feel free to contact me if you have feedback, questions or insights.",
       ],
+    },
+    {
+      id: 2,
+      title: "Progress",
+      dateString: "2020-09-02",
+      pictures: [],
+      paragraphs: [
+        "Since yesterday I have been coding quite a bit on this web application. Most of the work is concerning the look and feel of the application. That means there has been a lot of html and css googling/coding going on.",
+        "I don't write vanilla html/css since the web app is built using Angular, which is a Javascript framework [1]. I'm also using Angular Material, which is a user interface component library for Angular [2]. The reasons behind these choices are mainly out of convenience. I'm familiar with both the framwork and the component library since both were used when we created Exam Center. Even when using these powerful web application programming tools you still have to make adjustments to make the web application look good on all various device screens. For debugging I use Google Chrome, and It´s the only one I'h been using significantly. In the future I'm going try out Microsoft Edge which is also Chromium based but more lightweight (faster) than Google Chrome.",
+        "The screen height is now fixed, only the overflowing content make the scrollbar appear. Personally I Think it did a lot for the look and feel of the application, I'h also added expandable panels in the blog/projects section to avoid text cluttering.",
+
+        "[1] https://angular.io/",
+        "[2] https://material.angular.io/"
+      ],
     }
 
-  ];
+  ].reverse();
 
   constructor() { }
 

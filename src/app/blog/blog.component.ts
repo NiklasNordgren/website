@@ -15,11 +15,11 @@ export class BlogComponent implements OnInit {
   constructor(
     private router: Router,
     private postService: PostService,
-  ) {
-    this.posts = this.postService.getAll();
-  }
+  ) { }
 
   ngOnInit(): void {
+    if (this.posts.length == 0)
+      this.posts = this.postService.getAll();
   }
 
   gotoPost(post: Post): void {
