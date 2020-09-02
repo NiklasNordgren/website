@@ -1,4 +1,4 @@
-import { Component, HostBinding, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Component, HostBinding, ChangeDetectorRef, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
@@ -18,6 +18,12 @@ export class AppComponent {
   href: string = "";
   subscriptions: Subscription = new Subscription();
 
+  @ViewChild('toolbarHeader') toolbarHeaderView: ElementRef;
+  @ViewChild('toolbarFooter') toolbarFooterView: ElementRef;
+
+  toolbarHeaderHeight: number;
+  toolbarFooterHeight: number;
+
   @HostBinding('class') componentCssClass = "dark-theme";
 
   constructor(
@@ -34,11 +40,13 @@ export class AppComponent {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-  private _mobileQueryListener: () => void;
+  private _mobileQueryListener(): void {
+    debugger;
+  };
 
   ngOnInit(): void {
     const routerSub = this.router.events.subscribe((val) => {
-      if(this.location.path() != '' || this.location.path() != this.href){
+      if (this.location.path() != '' || this.location.path() != this.href) {
         this.href = this.location.path();
         this.changeDetectorRef.detectChanges();
       } else {
@@ -52,6 +60,11 @@ export class AppComponent {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
     this.subscriptions.unsubscribe();
+  }
+
+  ngAfterViewInit() {
+    this.toolbarHeaderHeight = this.toolbarHeaderView.nativeElement.offsetHeight;
+    this.toolbarFooterHeight = this.toolbarFooterView.nativeElement.offsetHeight;
   }
 
   toggleTheme(): void {
