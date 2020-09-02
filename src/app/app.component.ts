@@ -41,7 +41,7 @@ export class AppComponent {
   }
 
   private _mobileQueryListener(): void {
-    debugger;
+
   };
 
   ngOnInit(): void {
