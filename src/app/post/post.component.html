@@ -8,14 +8,7 @@
         <mat-divider [inset]="true"></mat-divider>
         <mat-card-content>
             <p></p>
-
             <p *ngFor="let paragraph of post.paragraphs">{{ paragraph }}</p>
-            <mat-card-actions class="margin-right-3 margin-left-1">
-                <button color="accent" mat-raised-button [routerLink]="['/blog']">
-                    <ion-icon name="arrow-back"></ion-icon> Back
-                </button>
-            </mat-card-actions>
-            
         </mat-card-content>
     </div>
 

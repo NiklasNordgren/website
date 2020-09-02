@@ -35,11 +35,18 @@
                                 </mat-expansion-panel-header>
                                 <p></p>
                                 <p *ngFor="let paragraph of post.paragraphs">{{ paragraph }}</p>
+
+
+
+                                <button color="accent" mat-raised-button (click)="gotoPost(post)">
+                                    <ion-icon name="link"></ion-icon> Post link
+                                </button>
+
                                 <mat-divider></mat-divider>
                             </mat-expansion-panel>
                         </mat-accordion>
                     </mat-list-item>
-                    
+
                 </div>
 
             </mat-list>
