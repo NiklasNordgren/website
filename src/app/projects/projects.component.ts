@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+  panelOpenStateExamCenter: boolean = false;
+  panelOpenStateThesisWork: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
