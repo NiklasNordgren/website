@@ -7,11 +7,6 @@
     height: initial !important;
 }
 
-.mat-expansion-panel-header-description {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .mat-card-actions,
 .mat-card-subtitle,
 .mat-card-content {
@@ -34,3 +29,24 @@ mat-accordion {
 ion-icon {
     margin-bottom: 3px;
 }
+
+@media screen and (max-width: 660px) {
+    .mat-expansion-panel-header-description {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mat-expansion-panel-header-title {
+        width: 90px;
+    }
+}
+
+.mat-expansion-panel-header-description {
+    display: flex;
+    justify-content: start;
+}
+
+.mat-expansion-panel-header-title {
+    width: 100px !important;
+}
+
