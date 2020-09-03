@@ -129,8 +129,14 @@ body {
 ion-icon {
     width: 24px;
     height: 24px;
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.button-text-wrapper {
+    margin-left: 3px;
+    display: inline-block !important;
+    vertical-align: middle !important;
 }
 
 .vertical-align-bottom {
@@ -177,4 +183,3 @@ mat-list.list-horizontal {
     display: block;
     margin-bottom: 0px;
 }
-

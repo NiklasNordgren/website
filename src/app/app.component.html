@@ -71,38 +71,38 @@
       <button mat-raised-button color="primary" class="margin-left-3" matTooltip="Home" [routerLink]="['/home']">
         <div *ngIf="href == '/home'; then homeButtonFilled else homeButtonOutline"></div>
         <ng-template #homeButtonFilled>
-          <ion-icon name="home"></ion-icon> Home
+          <ion-icon name="home"></ion-icon><span class="button-text-wrapper">Home</span>
         </ng-template>
         <ng-template #homeButtonOutline>
-          <ion-icon name="home-outline"></ion-icon> Home
+          <ion-icon name="home-outline"></ion-icon><span class="button-text-wrapper">Home</span>
         </ng-template>
       </button>
       <button mat-raised-button color="primary" class="margin-left-1" matTooltip="Blog" [routerLink]="['/blog']">
         <div *ngIf="href == '/blog'; then blogButtonFilled else blogButtonOutline"></div>
         <ng-template #blogButtonFilled>
-          <ion-icon name="pencil"></ion-icon> Blog
+          <ion-icon name="pencil"></ion-icon><span class="button-text-wrapper">Blog</span>
         </ng-template>
         <ng-template #blogButtonOutline>
-          <ion-icon name="pencil-outline"></ion-icon> Blog
+          <ion-icon name="pencil-outline"></ion-icon><span class="button-text-wrapper">Blog</span>
         </ng-template>
       </button>
       <button mat-raised-button color="primary" class="margin-left-1" matTooltip="Projects"
         [routerLink]="['/projects']">
         <div *ngIf="href == '/projects'; then projectsButtonFilled else projectsButtonOutline"></div>
         <ng-template #projectsButtonFilled>
-          <ion-icon name="hammer"></ion-icon> Projects
+          <ion-icon name="hammer"></ion-icon><span class="button-text-wrapper">Projects</span>
         </ng-template>
         <ng-template #projectsButtonOutline>
-          <ion-icon name="hammer-outline"></ion-icon> Projects
+          <ion-icon name="hammer-outline"></ion-icon><span class="button-text-wrapper">Projects</span>
         </ng-template>
       </button>
       <button mat-raised-button color="primary" class="margin-left-1" matTooltip="Contact" [routerLink]="['/contact']">
         <div *ngIf="href == '/contact'; then contactButtonFilled else contactButtonOutline"></div>
         <ng-template #contactButtonFilled>
-          <ion-icon name="mail"></ion-icon> Contact
+          <ion-icon name="mail"></ion-icon><span class="button-text-wrapper">Contact</span>
         </ng-template>
         <ng-template #contactButtonOutline>
-          <ion-icon name="mail-outline"></ion-icon> Contact
+          <ion-icon name="mail-outline"></ion-icon><span class="button-text-wrapper">Contact</span>
         </ng-template>
       </button>
     </ng-template>
