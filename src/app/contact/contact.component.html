@@ -7,13 +7,16 @@
         <mat-card-content>
             <p></p>
             <p>info@niklasnordgren.com</p>
-            <mat-divider [inset]="true"></mat-divider>
+            <mat-divider class="margin-bottom-1" [inset]="true"></mat-divider>
 
-            <form style="display: table; width:100%;" (ngSubmit)="sendMail($event)">
+            <div class="form-panel">
+                <form class="form" #formDirective="ngForm" [formGroup]="contactForm"
+                    (ngSubmit)="sendMail($event, formDirective)">
 
-                    <mat-form-field class="example-full-width">
+                    <mat-form-field class="form-full-width">
                         <mat-label>Email</mat-label>
-                        <input matInput [formControl]="emailFormControl" placeholder="Ex. example@email.com">
+                        <input name="from_name" class="form-input" matInput [formControl]="emailFormControl"
+                            autocomplete="off" placeholder="Ex. example@email.com">
                         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                             Please enter a valid email address
                         </mat-error>
@@ -22,16 +25,23 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field>
+                    <mat-form-field class="form-full-width margin-top-3">
                         <mat-label>Message</mat-label>
-                        <textarea matInput></textarea>
+                        <textarea name="message" class="form-text-area form-input" matInput
+                            [formControl]="textFieldFormControl" placeholder="Type message here"></textarea>
+                        <mat-error *ngIf="textFieldFormControl.hasError('required')">
+                            Message is <strong>required</strong>
+                        </mat-error>
                     </mat-form-field>
-
-                    <button color="accent" mat-raised-button>Send</button>
-
-
-            </form>
-
+                    <button mat-raised-button color="accent" (click)="resetForm(formDirective)" type="button">
+                        <ion-icon name="refresh-outline"></ion-icon><span class="button-text-wrapper">Reset</span>
+                    </button>
+                    <button [disabled]="!contactForm.valid" class="margin-top-3 margin-left-3" color="accent"
+                        type="submit" mat-raised-button>
+                        <ion-icon name="send-outline" class="vertical-align-middle"></ion-icon><span class="button-text-wrapper">Send</span>
+                    </button>
+                </form>
+            </div>
 
         </mat-card-content>
     </div>

@@ -10,14 +10,8 @@ export class MailService {
 
   constructor(private httpClient: HttpClient) { }
 
-  sendMail(e) {
-
-    emailjs.sendForm('service_igekokj', 'template_zorvgsd', e.target as HTMLFormElement, 'user_HZBjFkIhL2mMxNdH8V2Og')
-      .then(response => {
-        console.log('Success: ' + response.status, response.text);
-      }, error => {
-        console.log('Failed: ' + error);
-      });
+  sendMail(e: Event): Promise<EmailJSResponseStatus> {
+    return emailjs.sendForm('service_igekokj', 'template_zorvgsd', e.target as HTMLFormElement, 'user_HZBjFkIhL2mMxNdH8V2Og');
   }
 
 }
