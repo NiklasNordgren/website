@@ -42,8 +42,23 @@ export class PostService {
         "[3] https://www.google.com/intl/en/chrome/",
         "[4] https://www.microsoft.com/en-us/edge",
         "[5] https://www.howtogeek.com/202825/what%E2%80%99s-the-difference-between-chromium-and-chrome/",
-        
 
+
+      ],
+    },
+    {
+      id: 3,
+      title: "EmailJS",
+      dateString: "2020-09-03",
+      pictures: [],
+      paragraphs: [
+
+        "Today I'h worked a bit on the contact section of the web application. I spoke with the support team that is hosting my domain regarding the server environment. Since the servers they are offering is in the form of a PaaS (Platform as a Service), their customers don't have unlimited control of the server infrastructure [1]. Bottom line of this is I can't create my own custom backend system on the server that is hosting this domain. Depending on future projects I will invest in another server where I have full privileges. If you are not familiar with the term backend it's the server part of the system that queries databases, run background jobs and interact with other systems.",
+        "However I stumbled upon EmailJS which allows you to send Email directly from JavaScript (client). The signup is free, though you are restricted with 200 monthly requests [2].",
+        "I´h updated the contact section with a form which allows users to fill in their email & message in order to send me emails. Feel free to try it out and tell me if you find any bugs (features) :).",
+        "",
+        "[1] https://en.wikipedia.org/wiki/Platform_as_a_service",
+        "[2] https://www.emailjs.com/",
       ],
     }
 
