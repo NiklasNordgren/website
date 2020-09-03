@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
+import { MailService } from '../service/mail.service';
+import { FormControl, Validators } from '@angular/forms';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +11,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('autosize') autosize: CdkTextareaAutosize;
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+
+  constructor(
+    private mailService: MailService,
+    private _ngZone: NgZone
+    ) { }
 
   ngOnInit(): void {
+  }
+
+  sendMail(e) {
+    //this.mailService.sendMail(e);
+    console.log("send email");
+  }
+
+  triggerResize() {
+    // Wait for changes to be applied, then trigger textarea resize.
+    this._ngZone.onStable.pipe(take(1))
+      .subscribe(() => this.autosize.resizeToFitContent(true));
   }
 
 }
