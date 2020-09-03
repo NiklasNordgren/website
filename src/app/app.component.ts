@@ -58,6 +58,7 @@ export class AppComponent {
     });
     this.subscriptions.add(routerSub);
 
+    /*
     this.testService.getAll().subscribe(res => {
       console.log(JSON.stringify(res));
     });
@@ -65,6 +66,7 @@ export class AppComponent {
     this.testService.sendMail().subscribe(res => {
       console.log(JSON.stringify(res));
     });
+    */
 
   }
 
