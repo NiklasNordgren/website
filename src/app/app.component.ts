@@ -4,7 +4,6 @@ import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Subscription } from 'rxjs';
-import { TestService } from './service/test.service';
 
 @Component({
   selector: 'app-root',
@@ -33,8 +32,7 @@ export class AppComponent {
     public changeDetectorRef: ChangeDetectorRef,
     public media: MediaMatcher,
     public router: Router,
-    public location: Location,
-    private testService: TestService
+    public location: Location
   ) {
     this.toggleTheme();
     this.mobileQuery = media.matchMedia('(max-width: 660px)');
@@ -57,15 +55,6 @@ export class AppComponent {
       }
     });
     this.subscriptions.add(routerSub);
-
-    this.testService.getAll().subscribe(res => {
-      console.log(JSON.stringify(res));
-    });
-
-    this.testService.sendMail().subscribe(res => {
-      console.log(JSON.stringify(res));
-    });
-
   }
 
   ngOnDestroy(): void {
