@@ -71,7 +71,7 @@ export class PostService {
       paragraphs: [
         "It has been a busy couple of weeks for me since last post. I'h spent a lot of time at work coding in different projects. Besides that I have been doing a lot of exercising, coding in some personal projects and performed some white hat hacking (Penetration testing) with Kali Linux.",
         "Anyways, today I changed the color theme of this web application and replaced the split colored toolbar with a single colored one, please let me know what you think. I'h also updated the blog posts so that they can contain images, so you can expect at least one image per blog post in the future.",
-        "In the near future I plan to create a blog subscription feature, that will notify all subscribers when a new blog post is available. Have a wonderful day."
+        "I have plans to create a blog subscription feature, that will notify all subscribers when a new blog post is available. Have a wonderful day."
       ],
     }
 
