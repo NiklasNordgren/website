@@ -33,10 +33,10 @@
                             Message is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
-                    <button mat-raised-button color="accent" (click)="resetForm(formDirective)" type="button">
+                    <button mat-raised-button color="primary" (click)="resetForm(formDirective)" type="button">
                         <ion-icon name="refresh-outline"></ion-icon><span class="button-text-wrapper">Reset</span>
                     </button>
-                    <button [disabled]="!contactForm.valid" class="margin-top-3 margin-left-3" color="accent"
+                    <button [disabled]="!contactForm.valid" class="margin-top-3 margin-left-3" color="primary"
                         type="submit" mat-raised-button>
                         <ion-icon name="send-outline" class="vertical-align-middle"></ion-icon><span
                             class="button-text-wrapper">Send</span>

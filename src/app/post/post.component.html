@@ -8,6 +8,8 @@
         <mat-divider [inset]="true"></mat-divider>
         <mat-card-content>
             <p></p>
+            <img class="image" *ngFor="let image of post.images" [src]="image">
+            <p></p>
             <p *ngFor="let paragraph of post.paragraphs">{{ paragraph }}</p>
         </mat-card-content>
     </div>

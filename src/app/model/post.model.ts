@@ -3,5 +3,5 @@ export class Post {
     title: string;
     dateString: string;
     paragraphs: string[];
-    pictures: string[];
+    images: string[];
 }

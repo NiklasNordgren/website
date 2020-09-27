@@ -21,9 +21,11 @@
                                     </mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p></p>
+                                <img class="image" *ngFor="let image of post.images" [src]="image">
+                                <p></p>
                                 <p *ngFor="let paragraph of post.paragraphs">{{ paragraph }}</p>
 
-                                <button color="accent" mat-raised-button (click)="gotoPost(post)">
+                                <button color="primary" mat-raised-button (click)="gotoPost(post)">
                                     <ion-icon name="link"></ion-icon> Post link
                                 </button>
 
