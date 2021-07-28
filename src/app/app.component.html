@@ -5,7 +5,7 @@
   <ng-template #browser>
     <mat-toolbar color="primary">
 
-      <span class="margin-left-3"><b>Niklas Nordgren</b></span>
+      <span class="margin-left-3"><a [routerLink]="['/home']"><b>Niklas Nordgren</b></a></span>
 
       <button mat-raised-button color="accent" class="margin-left-3" matTooltip="Home" [routerLink]="['/home']">
         <div *ngIf="href == '/home'; then homeButtonFilled else homeButtonOutline"></div>
