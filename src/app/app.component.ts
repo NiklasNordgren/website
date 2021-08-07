@@ -35,7 +35,7 @@ export class AppComponent {
     public location: Location
   ) {
     this.toggleTheme();
-    this.mobileQuery = media.matchMedia('(max-width: 660px)');
+    this.mobileQuery = media.matchMedia('(max-width: 920px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }

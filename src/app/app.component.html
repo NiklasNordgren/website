@@ -5,7 +5,7 @@
   <ng-template #browser>
     <mat-toolbar color="primary">
 
-      <span class="margin-left-3"><a [routerLink]="['/home']"><b>Niklas Nordgren</b></a></span>
+      <span class="margin-left-3 page-title"><a [routerLink]="['/home']"><b>Niklas Nordgren</b></a></span>
 
       <button mat-raised-button color="accent" class="margin-left-3" matTooltip="Home" [routerLink]="['/home']">
         <div *ngIf="href == '/home'; then homeButtonFilled else homeButtonOutline"></div>
@@ -47,22 +47,22 @@
       <span class="fill-space"></span>
       <div class="margin-right-1">
         <a href="https://github.com/NiklasNordgren">
-          <button mat-mini-fab>
-            <ion-icon name="logo-github" matTooltip="GitHub"></ion-icon>
+          <button mat-mini-fab matTooltip="GitHub">
+            <ion-icon name="logo-github"></ion-icon>
           </button>
         </a>
       </div>
       <div class="margin-right-1">
         <a href="https://www.linkedin.com/in/niklas-nordgren-3270a31a7/">
-          <button mat-mini-fab>
-            <ion-icon name="logo-linkedin" matTooltip="Linkedin"></ion-icon>
+          <button mat-mini-fab matTooltip="Linkedin">
+            <ion-icon name="logo-linkedin"></ion-icon>
           </button>
         </a>
       </div>
       <div class="margin-right-3">
         <a href="https://www.instagram.com/nilsniklasnordgren/">
-          <button mat-mini-fab>
-            <ion-icon name="logo-instagram" matTooltip="Instagram"></ion-icon>
+          <button mat-mini-fab matTooltip="Instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
           </button>
         </a>
       </div>
@@ -152,22 +152,22 @@
       <span class="fill-space"></span>
       <div class="margin-right-1">
         <a href="https://github.com/NiklasNordgren">
-          <button mat-mini-fab>
-            <ion-icon name="logo-github" matTooltip="GitHub"></ion-icon>
+          <button mat-mini-fab matTooltip="GitHub">
+            <ion-icon name="logo-github"></ion-icon>
           </button>
         </a>
       </div>
       <div class="margin-right-1">
         <a href="https://www.linkedin.com/in/niklas-nordgren-3270a31a7/">
-          <button mat-mini-fab>
-            <ion-icon name="logo-linkedin" matTooltip="Linkedin"></ion-icon>
+          <button mat-mini-fab matTooltip="Linkedin">
+            <ion-icon name="logo-linkedin"></ion-icon>
           </button>
         </a>
       </div>
       <div class="margin-right-3">
         <a href="https://www.instagram.com/nikurura/">
-          <button mat-mini-fab>
-            <ion-icon name="logo-instagram" matTooltip="Instagram"></ion-icon>
+          <button mat-mini-fab matTooltip="Instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
           </button>
         </a>
       </div>
