@@ -7,8 +7,6 @@
         <mat-card-content>
             <p></p>
             <p>info@niklasnordgren.com</p>
-            <mat-divider class="margin-bottom-1" [inset]="true"></mat-divider>
-
             <div class="form-panel">
                 <form class="form" #formDirective="ngForm" [formGroup]="contactForm"
                     (ngSubmit)="sendMail($event, formDirective)">

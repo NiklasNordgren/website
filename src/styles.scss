@@ -74,7 +74,7 @@ body {
 .mat-card {
     border-radius: 0px !important;
     width: 100%;
-    height: calc(100% - 64 * 2px);
+    height: calc(100vh - 64 * 1px);;
     position: relative !important;
     display: flex !important;
     overflow: auto !important;
@@ -90,7 +90,7 @@ body {
     .mat-card {
         border-radius: 0px !important;
         width: 100%;
-        height: calc(100% - 56 * 3px);
+        height: calc(100vh - 56 * 2px);
         position: relative !important;
         display: flex !important;
         overflow: auto !important;

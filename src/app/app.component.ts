@@ -18,12 +18,6 @@ export class AppComponent {
   href: string = "";
   subscriptions: Subscription = new Subscription();
 
-  @ViewChild('toolbarHeader') toolbarHeaderView: ElementRef;
-  @ViewChild('toolbarFooter') toolbarFooterView: ElementRef;
-
-  toolbarHeaderHeight: number;
-  toolbarFooterHeight: number;
-
   @HostBinding('class') componentCssClass = "dark-theme";
 
   constructor(
@@ -60,11 +54,6 @@ export class AppComponent {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
     this.subscriptions.unsubscribe();
-  }
-
-  ngAfterViewInit() {
-    this.toolbarHeaderHeight = this.toolbarHeaderView.nativeElement.offsetHeight;
-    this.toolbarFooterHeight = this.toolbarFooterView.nativeElement.offsetHeight;
   }
 
   toggleTheme(): void {

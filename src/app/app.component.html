@@ -81,73 +81,18 @@
           <ion-icon name="sunny-outline"></ion-icon>
         </button>
       </ng-template>
-
     </mat-toolbar>
+
+    <router-outlet></router-outlet>
 
   </ng-template>
 
   <ng-template #mobile>
-
     <mat-toolbar color="primary">
 
-      <span class="margin-left-3 margin-top-1"><b>Niklas Nordgren</b></span>
+      <span class="margin-left-3 margin-top-1"><b>N.N</b></span>
 
       <span class="fill-space"></span>
-
-      <div *ngIf="darkThemeActive; then thenBlock else elseBlock"></div>
-      <ng-template #thenBlock>
-        <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3"
-          aria-label="Icon button with a half moon icon, dark theme" matTooltip="Dark theme">
-          <ion-icon name="moon-outline"></ion-icon>
-        </button>
-      </ng-template>
-
-      <ng-template #elseBlock>
-        <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3"
-          aria-label="Icon button with sun icon, light theme" matTooltip="Light theme">
-          <ion-icon name="sunny-outline"></ion-icon>
-        </button>
-      </ng-template>
-
-    </mat-toolbar>
-
-    <mat-toolbar color="primary">
-      <button mat-mini-fab class="margin-left-3" matTooltip="Home" [routerLink]="['/home']">
-        <div *ngIf="href == '/home'; then homeFabFilled else homeFabOutline"></div>
-        <ng-template #homeFabFilled>
-          <ion-icon name="home"></ion-icon>
-        </ng-template>
-        <ng-template #homeFabOutline>
-          <ion-icon name="home-outline"></ion-icon>
-        </ng-template>
-      </button>
-      <button mat-mini-fab class="margin-left-1" matTooltip="Blog" [routerLink]="['/blog']">
-        <div *ngIf="href == '/blog'; then blogFabFilled else blogFabOutline"></div>
-        <ng-template #blogFabFilled>
-          <ion-icon name="pencil"></ion-icon>
-        </ng-template>
-        <ng-template #blogFabOutline>
-          <ion-icon name="pencil-outline"></ion-icon>
-        </ng-template>
-      </button>
-      <button mat-mini-fab class="margin-left-1" matTooltip="Projects" [routerLink]="['/projects']">
-        <div *ngIf="href == '/projects'; then projectsFabFilled else projectsFabOutline"></div>
-        <ng-template #projectsFabFilled>
-          <ion-icon name="hammer"></ion-icon>
-        </ng-template>
-        <ng-template #projectsFabOutline>
-          <ion-icon name="hammer-outline"></ion-icon>
-        </ng-template>
-      </button>
-      <button mat-mini-fab class="margin-left-1" matTooltip="Contact" [routerLink]="['/contact']">
-        <div *ngIf="href == '/contact'; then contactFabFilled else contactFabOutline"></div>
-        <ng-template #contactFabFilled>
-          <ion-icon name="mail"></ion-icon>
-        </ng-template>
-        <ng-template #contactFabOutline>
-          <ion-icon name="mail-outline"></ion-icon>
-        </ng-template>
-      </button>
 
       <span class="fill-space"></span>
       <div class="margin-right-1">
@@ -171,17 +116,66 @@
           </button>
         </a>
       </div>
+
+      <div *ngIf="darkThemeActive; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+        <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3"
+          aria-label="Icon button with a half moon icon, dark theme" matTooltip="Dark theme">
+          <ion-icon name="moon-outline"></ion-icon>
+        </button>
+      </ng-template>
+
+      <ng-template #elseBlock>
+        <button (click)="toggleTheme()" mat-mini-fab class="margin-right-3"
+          aria-label="Icon button with sun icon, light theme" matTooltip="Light theme">
+          <ion-icon name="sunny-outline"></ion-icon>
+        </button>
+      </ng-template>
     </mat-toolbar>
 
+    <router-outlet></router-outlet>
+
+    <mat-toolbar color="primary" style="position: fixed; bottom: 0;">
+      <div class="outer-mobile-footer">
+        <div class="inner-mobile-footer">
+          <button mat-mini-fab [routerLink]="['/home']">
+            <div *ngIf="href == '/home'; then homeButtonFilled else homeformButtonOutline"></div>
+            <ng-template #homeButtonFilled>
+              <ion-icon name="home"></ion-icon>
+            </ng-template>
+            <ng-template #homeformButtonOutline>
+              <ion-icon name="home-outline"></ion-icon>
+            </ng-template>
+          </button>
+          <button mat-mini-fab [routerLink]="['/blog']">
+            <div *ngIf="href == '/blog'; then blogButtonFilled else blogButtonOutline"></div>
+            <ng-template #blogButtonFilled>
+              <ion-icon name="pencil"></ion-icon>
+            </ng-template>
+            <ng-template #blogButtonOutline>
+              <ion-icon name="pencil-outline"></ion-icon>
+            </ng-template>
+          </button>
+          <button mat-mini-fab [routerLink]="['/projects']">
+            <div *ngIf="href == '/projects'; then projectsButtonFilled else projectsButtonOutline"></div>
+            <ng-template #projectsButtonFilled>
+              <ion-icon name="hammer"></ion-icon>
+            </ng-template>
+            <ng-template #projectsButtonOutline>
+              <ion-icon name="hammer-outline"></ion-icon>
+            </ng-template>
+          </button>
+          <button mat-mini-fab [routerLink]="['/contact']">
+            <div *ngIf="href == '/contact'; then contactButtonFilled else contactformButtonOutline"></div>
+            <ng-template #contactButtonFilled>
+              <ion-icon name="mail"></ion-icon>
+            </ng-template>
+            <ng-template #contactformButtonOutline>
+              <ion-icon name="mail-outline"></ion-icon>
+            </ng-template>
+          </button>
+        </div>
+      </div>
+    </mat-toolbar>
   </ng-template>
-</div>
-
-<router-outlet></router-outlet>
-
-<div #toolbarFooter>
-  <mat-toolbar>
-    <span style="width:100% !important; font-size: 13px; text-align: center;">
-      ©2020 Niklas Nordgren
-    </span>
-  </mat-toolbar>
 </div>
